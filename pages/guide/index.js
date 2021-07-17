@@ -1,6 +1,7 @@
 // pages/guide/index.js
 import wxMqtt from '../../utils/mqtt/wxMqtt';
 import { getMqttconfig } from '../../utils/api/device-api';
+import { getFamilyList } from '../../utils/api/family-api'
 import request from '../../utils/request';
 
 Page({
@@ -42,7 +43,7 @@ Page({
         data: {
           action: 'device.virtualAdd',
           params: {
-            product_id: 'qkxb0pmel0q1g9yf',
+            product_id: "qkxb0pmel0q1g9yf",
             token: 'release_common_component'
           }
         }
@@ -56,6 +57,9 @@ Page({
       this.setData({ cloudInner: { ...cloudInner } });
 
       wx.setStorageSync('vir_device', device_id);
+
+      const homeList = await getFamilyList();
+      wx.setStorageSync('owner_id', homeList[0].home_id)
       let {
         client_id,
         password,

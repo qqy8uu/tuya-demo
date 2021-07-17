@@ -3,19 +3,19 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  background-color: chocolate;
+  
 }
 .count-box-value {
-  font-size: 100rpx;
+  font-size: 70rpx;
   font-family: 'DIN Condensed';
-  color: #0DB178;
+  color: #ffffff;
 }
 .count-box-unit {
-  color: #86898a;
+  color: #ffffff;
   margin-left: 12rpx;
 }
 .count-tip {
-  color: #D3D4D4;
+  color: #ffffff;
   font-size: 28rpx;
   margin-top: -10rpx;
 }
@@ -51,7 +51,7 @@
 }
 .mode-box {
   margin-top: 72rpx;
-  background-color: blue;
+  background-color: rgb(141, 211, 49);
 }
 .mode-item {
   display: flex;
@@ -61,10 +61,11 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 32rpx;
-  background-color: rgba(255, 255, 255, 0.05);
+ 
   padding: 40rpx;
   box-sizing: border-box;
   margin-bottom: 24rpx;
+  background-color: rgb(255, 255, 255);
 }
 .mode-item-left {
   display: flex;
@@ -76,13 +77,13 @@
   height: 92rpx;
 }
 .mode-item-title {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(124, 108, 134, 0.75);
   font-size: 16;
   font-weight: 500;
   margin-left: 50rpx;
 }
 .mode-item-arrow {
-  color: #76787A;
+  color: #584d5a;
   font-size: 40rpx;
 }
 .popupmain{
@@ -105,11 +106,12 @@
   left: 0;
   width: 100%;
 	height: 320px;
-	background-color: #27c3d9;
+	background-color: rgb(63, 197, 221);
 }
 .a{
   display: flex;
   flex-direction: column;
+  background-color: rgb(63, 197, 221);
 }
 .common-panel-header {
   z-index: 1;

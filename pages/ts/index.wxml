@@ -1,7 +1,7 @@
 <!--miniprogram/pages/home_center/common_panel/index.js.wxml-->
 <wxs src="./index.wxs" module="utils" />
 <view class="a">
-<image class="common-panel-backgroud" src="{{forest}}" />
+<image class="common-panel-backgroud" src="../../image/forest@2x.png" />
 <navbar device_name="智能跳绳" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
 <view class="common-panel-header" >
   <!-- <view class="common-panel-header-block"  style="background-color: green"> -->
@@ -9,23 +9,23 @@
     <view class="common-panel-header-dpValue">22</view> -->
     <view class="count-box">
           <view class="count-box-unit">目标</view>
-          <view class="count-box-value">100{{titlevalue}}</view>
-          <view class="count-box-unit">  {{titletext}}</view>
+          <view class="count-box-value">{{titlevalue}}</view>
+          <view class="count-box-unit">{{titletext}}</view>
         </view>
         <view bindtap="sendCount1" class="count-tip">当前模式：{{modetext}}</view>
         
         <view class="items">
           <view class="item">
-            <view class="item-value">11{{valueOne}}</view>
-            <view class="item-label">22{{textOne}}</view>
+            <view class="item-value">{{valueOne}}</view>
+            <view class="item-label">{{textOne}}</view>
           </view>
           <view class="item">
-            <view class="item-value">55{{valueTwo}}"</view>
-            <view class="item-label">66{{textTwo}}</view>
+            <view class="item-value">{{valueTwo}}"</view>
+            <view class="item-label">{{textTwo}}</view>
           </view>
           <view class="item">
-            <view class="item-value">33{{valueThr}}</view>
-            <view class="item-label">44{{textThr}}</view>
+            <view class="item-value">{{valueThr}}</view>
+            <view class="item-label">{{textThr}}</view>
           </view>
         </view>
   <!-- </view> -->
@@ -42,13 +42,14 @@
   </view>
 </block> -->
 
-<view class="scroll-view" style="background-color:green">
-  <view bind:tap="sendModFree" class="mode-item">
+<view class="scroll-view" style="background-color:rgb(63, 197, 221)">
+  
     <view wx:if="{{blushow}}"  bind:tap="connect" class="mode-item">
             <view class="mode-item-left">
               <view class="mode-item-title">连接蓝牙</view>
             </view>
           </view>
+          <view bind:tap="sendModFree" class="mode-item">
             <view class="mode-item-left">
               <view class="mode-item-title">自由训练</view>
             </view>
